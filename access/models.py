@@ -34,6 +34,8 @@ class User(AbstractModel, AbstractBaseUser):
         db_index=True,
     )
 
+    bio = models.TextField(_("Bio"), blank=True)
+
     name = models.CharField(_("Name"), max_length=32, blank=True)
 
     password = models.CharField(_("Password"), max_length=128)

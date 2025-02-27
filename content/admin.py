@@ -17,7 +17,7 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ("body", "is_deleted", "created_at", "updated_at")
+    list_display = ("body", "is_deleted", "created_at", "updated_at", "owner", "post")
     list_filter = ("is_deleted", "created_at", "updated_at")
     search_fields = ("body",)
     date_hierarchy = "created_at"
